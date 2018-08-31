@@ -1,0 +1,365 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "	quicksolutionstaxcon@gmail.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email addressx
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Enquiry form submission" . " | " . $_POST["email"] . " | " . $_POST["number"];
+    $subject2 = "QuickSoutionsTaxCon: Glad we can Help!";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Hey " . $first_name . ",\n\n" . "Thanks for contacting QuickSoutionsTaxCon. Our executive will reach you shortly.";
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    ini_set('sendmail_from', 'Tax_Services@quicksolutionstaxcon.com');
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Business, finance, Corporate"> 
+	<meta name="#" content="#"> 
+    <title>QST</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="elegant_font/style.css" />
+    <!--[if lte IE 7]><script src="elegant_font/lte-ie7.js"></script><![endif]-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/slider-pro.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="elegant_font/style.css"> 
+    <link rel="stylesheet" href="css/style1.css"> 
+    <!---custom css-->
+	<link rel="stylesheet" href="css/color.css">  
+	<link rel="stylesheet" href="css/custom.css">  
+   
+   <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <script type="text/javascript" src="js/selectivizr.js"></script>
+    <![endif]-->
+</head>
+<style>
+
+#break{
+     height:140px;
+}
+div#break>p{
+    text-align: center;
+    font-size: 20px;
+    padding: 3%;
+    color: #111;
+	}
+#form-container{
+	background:;
+	}
+#main-content{
+
+     
+	height:800px;
+	width:inherit;
+    background: linear-gradient(to right, #e0e0e0, #ffffff);
+	overflow:hidden;
+	background-repeat:no-repeat;
+}
+form{
+    
+   background-image:url("../images/slider/slide4.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+    -o-background-size: cover; 
+	background-size: 100% 100%;
+	background-color:transparent;
+    height:535px;
+    background: #8d908d;
+    padding: 3%;
+    border: 1px solid #bfbfbf;
+    box-shadow: 0px 0px 3px 3px #a5a3a3;
+}
+.form-control, input {
+    border-radius: 4px;
+    padding: 15px 10px;
+    height: auto;
+    margin-bottom: 15px;
+}
+div#form.row{
+    position: relative;
+    top: -20px;
+}
+label.control-label.col-sm-2{
+     color:#ffffff;
+	 }
+@media only screen and (max-width: 544px) {
+    /* For mobile phones: */
+     form{
+        height: inherit;
+    }
+}
+</style>
+
+<body itemscope itemtype ="http://schema.org/LocalBusiness">
+ <link itemprop="additionalType" href="http://schema.org/FinancialService"/>
+    <!-- Header End -->
+    <header>
+        <!-- Navigation Menu start-->
+		
+	<nav id="topNav" class="navbar navbar-default main-menu">
+    <div class="container">
+        <button class="navbar-toggler hidden-md-up pull-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            ☰
+        </button> 
+		 <a class="navbar-brand page-scroll" href="#slider"><img class="logo" id="logo" src="images/logo.jpg" alt="logo" itemprop="image"  itemprop="logo" src="logo.jpg" alt="business logo" /></a>
+         
+        <div class="collapse navbar-toggleable-sm" id="collapsingNavbar">
+            <ul class="nav navbar-nav">
+                 <li id="act">
+                            <a href="index.html#slider">HOME</a>
+                        </li>
+                        <li>
+                            <a href="index.html#abt">ABOUT</a>
+                        </li>
+						 <li>
+                            <a href="index.html#services">SERVICES</a>
+                        </li>
+						 <li>
+                            <a href="knowledge-center.html">KNOWLEDGE CENTER</a>
+							<!--<ul id="dropdown-list">
+							<li><a href="#">Acts/rules</a></li>
+							<li><a href="#">utilities</a></li>
+							<li><a href="#">links</a></li>
+							<li><a href="#">vat</a></li>
+							<li><a href="#">circulars/notification</a></li>
+							<li><a href="#">bulletins</a></li>
+							<li><a href="#">software</a></li>
+							</ul>-->
+                        </li> 
+						
+						<li>
+                            <a href="calculator.html#side-bar">CALCULATORS</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html#portfolio">GALLERY</a>
+                        </li> 
+                        
+						 <li>
+                            <a href="#">PAYMENTS</a>
+                        </li>
+                      <!---  <li>
+                            <a href="index.html#contact">CONTACT US</a>
+                        </li>-->
+						<li  class="active">
+                            <a href="enquiry.php#form-container">ENQUIRY</a>
+                        </li>
+            </ul> 
+        </div>
+    </div>
+</nav>
+        
+    </header>
+    <!-- Header End -->
+    <section class="slider-pro slider" id="slider">
+        <div class="sp-slides">
+            <!-- Slides -->
+            <div class="sp-slide main-slides">
+            <div class="img-overlay"></div>
+                <img class="sp-image" src="images/slider/slide1.jpg" alt="Slider 2"/> 
+                <h1 id="banner-text" class="sp-layer slider-text-big"
+                data-position="center" data-show-transition="left" data-hide-transition="right" data-vertical="55%" data-show-delay="1500" data-hide-delay="200">
+                <span class="banner-title" itemprop="name">Quick Solution Taxcon</span>
+                </h1> 
+            </div>
+            <!-- Slides End -->
+			
+            <!-- Slides -->
+            <div class="sp-slide main-slides">
+                <div class="img-overlay"></div> 
+                <img class="sp-image" src="images/slider/slide2.jpg" alt="Slider 1"/> 
+                <h1 id="banner-text" class="sp-layer slider-text-big"
+                data-position="center" data-show-transition="left" data-hide-transition="right" data-vertical="55%" data-show-delay="1500" data-hide-delay="200">
+                <span class="banner-title" itemprop="name">Quick Solution Taxcon</span>
+                </h1> 
+            </div>
+            <!-- Slides End -->
+            <!-- Slides -->
+            <div class="sp-slide main-slides">
+                <div class="img-overlay"></div> 
+                <img class="sp-image" src="images/slider/slide3.jpg" alt="Slider 3"/> 
+                <h1 id="banner-text" class="sp-layer slider-text-big"
+                data-position="center" data-show-transition="left" data-hide-transition="right" data-vertical="55%" data-show-delay="1500" data-hide-delay="200">
+                <span class="banner-title" itemprop="name">Quick Solution Taxcon</span>
+                </h1> 
+            </div>
+            <!-- Slides End -->
+        </div>
+    </section>
+    <!-- Main Slider End -->
+		
+	
+	
+	<section id="main-content">
+	  
+	  
+	  <section>
+		 <div class="row" id="break">
+		 <p> Please enter your queries along with you details below. we'll get back to u as soon as possible</p>
+		   
+		 </div>
+	  </section>
+	
+	<div class="container">
+	<div class="row">
+	
+		<div id="form-container">
+		<div id="form" class="row" style="position:relative; ">
+        <div style="width: 60%;margin:0 auto">
+         
+         <form class="form-horizontal" action="" method="post">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="first_name">First Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="first_name" placeholder="Enter your first name" name="first_name" required>
+      </div>
+    </div>
+  <div class="form-group">
+      <label class="control-label col-sm-2" for="last_name">Last Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="last_name" placeholder="Enter your last name" name="last_name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email id:</label>
+      <div class="col-sm-10">
+        <input type="email" required class="form-control" id="email" placeholder="Enter your last name" name="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="number">Contact No.:</label>
+      <div class="col-sm-10">
+        <input type="text" required class="form-control" id="number" placeholder="Enter your conntact number" name="number">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="message">Message:</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" rows="5" cols="30" id="message" name="message"></textarea>
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" name="submit" value="Submit" class="btn btn-default"/>
+      </div>
+    </div>
+  </form>
+      
+				</div>
+				</div>
+			</div
+	
+
+		</div>
+	
+	</div>
+	</div>
+	
+	
+	<section>
+		 <div class="row" id="break">
+		  
+		 </div>
+	  </section>
+	  
+	</section>
+	
+	
+	<!--footer-->
+	<section class="footer-container">
+        <div class="container">
+            <div class="row footer-containertent">
+                <div class="col-md-4">
+                    <h4 > address</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et porro quos iste ratione doloribus asperiores, error omnis delectus rerum sapiente. Et, aliquam modi beatae quae in perferendis ab est fugiat!</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>News & Updates</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, nam corporis quas, saepe minima error aperiam dolorum aliquam, quis deserunt eos eius quisquam odio itaque.</p>
+                </div>
+                <div class="col-md-4 contac-us">
+                    <h4>Contact Us</h4>
+                    <p>Lorem ipsum dolor sit amet adipisicing elit.</p>
+					<ul>
+                            <li><i class="fa fa-home"></i>123 New Venu Street</li>
+                            <li><i class="fa fa-phone"></i>001 123 12345 99</li>
+                            <li><i class="fa fa-envelope-o"></i>support@website.com</li>
+                        </ul> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+
+        <div class="container">
+            <div class="row">
+                <div class="footer-containertent">
+
+                    <ul class="footer-social-info">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                    </ul>
+					<br/><br/>
+<p>Copyright © 2018. Template by: <a href="http://webthemez.com/free-bootstrap-templates/">WebThemez</a>, All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.easypiechart.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.sliderPro.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+ <script src="contact/jqBootstrapValidation.js"></script>
+ <script src="contact/contact_me.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
+
